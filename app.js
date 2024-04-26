@@ -7,6 +7,8 @@ require("dotenv").config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(routes);
+const flash = require("flash");
+app.use(flash);
 app.use(cors);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
